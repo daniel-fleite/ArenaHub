@@ -1,0 +1,215 @@
+/* ================================
+   NAVBAR - ARENAHUB
+================================ */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 0 !important;
+
+    margin: 0 !important;
+
+    background-color: #000;
+    border-bottom: none !important;
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.logo-container {
+    flex-shrink: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+}
+
+.logo img {
+    width: 180px;
+    height: auto;
+
+    margin-left: 35px;
+
+    display: block;
+}
+
+
+/* ================================
+   LINKS
+================================ */
+
+header .nav {
+    display: flex;
+    align-items: center;
+
+    gap: 2px;
+
+    margin: 0 !important;
+    padding: 0;
+}
+
+header .nav-link {
+    color: #c3c3c4;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    padding: 8px 10px !important;
+
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+header .nav-link:hover {
+    color: #ffffff;
+}
+
+
+/* LINK ATIVO */
+
+header .link-secondary {
+    color: #22C55E !important;
+    font-weight: 600;
+}
+
+
+/* ================================
+   BOTÃO
+================================ */
+
+.navbar-button {
+    flex-shrink: 0;
+}
+
+header .btn-primary {
+    border: none;
+    border-radius: 50px;
+
+    padding: 8px 22px;
+
+    margin-right: 60px;
+
+    background-color: #22C55E;
+    color: #000000;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: all 0.2s ease;
+}
+
+header .btn-primary:hover {
+    background-color: #16A34A;
+    transform: translateY(-1px);
+}
+
+
+/* ================================
+   HAMBURGER
+================================ */
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+
+    .logo img {
+        width: 150px;
+        margin-left: 20px;
+    }
+
+    header .nav {
+        gap: 0;
+    }
+
+    header .nav-link {
+        font-size: 14px;
+        padding: 8px 6px !important;
+    }
+
+    header .btn-primary {
+        margin-right: 25px;
+        padding: 8px 17px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    header {
+        min-height: 65px;
+
+        padding: 12px 20px !important;
+    }
+
+
+    /* LOGO */
+
+    .logo img {
+        width: 140px;
+
+        margin-left: 0;
+    }
+
+
+    /* ESCONDE MENU */
+    header .nav {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0 !important;
+        background-color: #000;
+    }
+
+    header .nav.menu-aberto {
+        display: flex;
+    }
+
+    /* ESCONDE BOTÃO */
+
+    .navbar-button {
+        display: none;
+    }
+
+
+    /* MOSTRA HAMBURGER */
+
+    .menu-toggle {
+        display: block;
+
+        padding: 0;
+
+        font-size: 27px;
+        line-height: 1;
+    }
+}

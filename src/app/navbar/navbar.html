@@ -1,0 +1,53 @@
+<header>
+    <div class="logo-container">
+        <a href="#" class="logo">
+            <img src="logo.png" alt="ArenaHub logo">
+        </a>
+    </div>
+    <ul class="nav" [class.menu-aberto]="menuAberto">
+        <li>
+            <a href="#" class="nav-link link-secondary">
+                Início
+            </a>
+        </li>
+        <li>
+            <a href="#funcionalidades" class="nav-link">
+                Funcionalidades
+            </a>
+        </li>
+        <li>
+            <a href="#beneficios" class="nav-link">
+                Benefícios
+            </a>
+        </li>
+        <li>
+            <a href="#atletas" class="nav-link">
+                Pra quem é
+            </a>
+        </li>
+        <li>
+            <a href="#depoimentos" class="nav-link">
+                Depoimentos
+            </a>
+        </li>
+        <li>
+            <a href="#cta" class="nav-link">
+                Contato
+            </a>
+        </li>
+
+    </ul>
+
+    <div class="navbar-button">
+        <button type="button" class="btn btn-primary">
+            Teste grátis
+        </button>
+    </div>
+    <button
+        class="menu-toggle"
+        type="button"
+        (click)="toggleMenu()"
+    >
+        ☰
+    </button>
+</header>

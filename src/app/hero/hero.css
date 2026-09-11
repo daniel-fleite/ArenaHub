@@ -1,0 +1,259 @@
+/* ================================
+   HERO - ARENAHUB
+================================ */
+
+.hero {
+    position: relative;
+
+    height: calc(100dvh - 85px);
+    min-height: 0;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: hidden;
+
+    background-color: #000;
+}
+
+
+/* ================================
+   IMAGEM
+================================ */
+
+.hero-image {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 70%;
+    height: 100%;
+
+    padding: 0 !important;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Escurecimento da imagem */
+
+.hero-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        #000 0%,
+        rgba(0, 0, 0, 0.75) 30%,
+        rgba(0, 0, 0, 0.25) 70%,
+        rgba(0, 0, 0, 0.1) 100%
+    );
+}
+
+
+/* ================================
+   CONTEÚDO
+================================ */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 75%;
+
+    padding: 100px 0 70px 50px !important;
+}
+
+
+/* ================================
+   TÍTULO
+================================ */
+
+.hero h1 {
+    margin-bottom: 12px;
+
+    color: #ffffff;
+
+    font-size: clamp(48px, 5vw, 94px);
+    font-weight: 800;
+
+    line-height: 0.98;
+
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: #22C55E;
+    font-style: italic;
+}
+
+
+/* ================================
+   DESCRIÇÃO
+================================ */
+
+.hero .lead {
+    margin-bottom: 28px;
+
+    color: #c3c3c4;
+
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+/* ================================
+   BOTÕES
+================================ */
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.hero .btn {
+    border-radius: 50px;
+
+    padding: 9px 18px !important;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* Botão principal */
+
+.hero .btn-primary {
+    border: none;
+
+    background-color: #22C55E;
+    color: #000000;
+
+    transition: 0.2s ease;
+}
+
+.hero .btn-primary:hover {
+    background-color: #16A34A;
+
+    transform: translateY(-2px);
+}
+
+
+/* Botão secundário */
+
+.hero .btn-outline-secondary {
+    border: 1px solid #ffffff;
+
+    color: #ffffff;
+
+    background: transparent;
+}
+
+.hero .btn-outline-secondary:hover {
+    background-color: #ffffff;
+
+    color: #111827;
+}
+
+
+/* ================================
+   BENEFÍCIOS
+================================ */
+
+.hero-benefits {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin: 90px 0 40px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.hero-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #d1d5db;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* imagens beneficio */
+
+.hero-benefits li img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+/* ================================
+   RESPONSIVO
+================================ */
+
+@media (max-width: 991px) {
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-content {
+        width: 100%;
+
+        padding: 80px 30px !important;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .side-text {
+        display: none;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .hero {
+        min-height: 840px;
+    }
+
+    .hero-content {
+        padding: 60px 20px !important;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        letter-spacing: -1px;
+    }
+
+    .hero .lead {
+        font-size: 13px;
+    }
+
+    .hero-benefits {
+        flex-direction: column;
+        gap: 12px;
+    }
+}

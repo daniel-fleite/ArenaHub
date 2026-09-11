@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+div[id] {
+    scroll-margin-top: 85px;
+}
+
+section[id] {
+    scroll-margin-top: 85px;
+}
+
+@media (max-width: 576px){
+    div[id] {
+    scroll-margin-top: 70px;
+}
+
+section[id] {
+    scroll-margin-top: 70px;
+}
+}

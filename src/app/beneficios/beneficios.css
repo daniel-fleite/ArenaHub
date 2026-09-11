@@ -1,0 +1,212 @@
+/* ================================
+   MODALIDADES
+================================ */
+*{
+    width: 100%;
+}
+
+.beneficios {
+    background-color: #f5f7f6;
+}
+
+#icon-grid {
+    max-width: 1450px;
+
+    padding-top: 55px !important;
+    padding-bottom: 55px !important;
+
+    text-align: center;
+}
+
+/* ================================
+   TÍTULO
+================================ */
+
+#icon-grid > h1 {
+    margin: 0;
+    margin-top: -10px;
+
+    padding: 0 !important;
+
+    border: none !important;
+
+    color: #111827;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+h1 span {
+    color: #16A34A;
+}
+
+/* ================================
+   SUBTÍTULO
+================================ */
+
+#icon-grid > h2 {
+    margin: 12px 0 0;
+    margin-bottom: -20px;
+
+    color: #6B7280;
+
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+/* ================================
+   GRID
+================================ */
+
+#icon-grid > .row {
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 70px;
+
+    margin-top: 35px !important;
+    padding: 0 !important;
+}
+
+
+/* ================================
+   MODALIDADE
+================================ */
+#icon-grid .col {
+    flex: 0 0 280px;
+
+    width: 280px !important;
+    padding: 10px;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center;
+}
+
+/* Container interno */
+
+#icon-grid .col > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 220px;
+
+    padding: 25px 20px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#icon-grid .col > div:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================
+   ÍCONES
+================================ */
+
+#icon-grid .col img {
+    width: 55px;
+    height: 55px;
+
+    margin-bottom: 14px;
+    margin-top: 15px;
+
+    object-fit: contain;
+}
+
+/* ================================
+   NOME DA MODALIDADE
+================================ */
+
+#icon-grid .col h3 {
+    margin: 0 !important;
+    margin-bottom: -20px;
+
+    color: #111827;
+
+    font-size: 17px !important;
+    font-weight: bold;
+
+    line-height: 1.3;
+}
+
+#icon-grid .col p {
+    margin-top: 4px;
+
+    font-size: 15.5px;
+}
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+@media (max-width: 991px) {
+    #icon-grid > .row {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    #icon-grid {
+        padding-top: 45px !important;
+        padding-bottom: 45px !important;
+    }
+
+    #icon-grid > h1 {
+        font-size: 26px;
+    }
+
+    #icon-grid > h2 {
+        font-size: 16px;
+    }
+
+#icon-grid > .row {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 25px 10px;
+
+}
+
+#icon-grid .col {
+
+    flex: 0 0 calc(50% - 10px);
+
+    width: calc(50% - 10px) !important;
+
+}
+
+    #icon-grid .col img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #icon-grid .col h3 {
+        font-size: 15px !important;
+    }
+
+}

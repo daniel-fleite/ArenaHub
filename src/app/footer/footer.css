@@ -1,0 +1,155 @@
+/* ==============================
+   FOOTER
+================================= */
+footer {
+    margin: 0 !important;
+    padding: 40px 70px 25px !important;
+
+    background-color: #000;
+
+    border-top: 1px solid #1f2933 !important;
+
+    color: #ffffff;
+}
+
+/* ==============================
+   LOGO
+================================= */
+
+footer .footer-logo {
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+}
+
+footer .footer-logo img {
+    width: 150px;
+    height: auto;
+
+    display: block;
+}
+
+
+/* ==============================
+   COLUNAS
+================================= */
+
+footer .footer-row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 0;
+}
+
+
+footer .footer-row a {
+    color: #9CA3AF;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+footer .footer-row a:hover {
+    color: #22C55E;
+}
+
+
+/* ==============================
+   REDES SOCIAIS
+================================= */
+
+footer .social-links {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+footer .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    color: #9CA3AF;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease,
+                transform 0.2s ease;
+}
+
+footer .social-links a:hover {
+    color: #22C55E;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   COPYRIGHT
+================================= */
+footer .copyright {
+    max-width: 1700px;
+    margin: 35px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #1f2933;
+    color: #6B7280;
+    font-size: 13px;
+}
+
+.footer-content {
+    max-width: 1700px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-brand p {
+    max-width: 280px;
+
+    margin: 18px 0 0;
+
+    color: #6B7280;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ==============================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    footer {
+        padding: 35px 25px 25px !important;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    footer .footer-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px 25px;
+    }
+
+    footer .copyright {
+        margin-top: 30px;
+        text-align: center;
+    }
+}

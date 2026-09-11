@@ -1,0 +1,504 @@
+/* ================================
+   FUNCIONALIDADES
+================================ */
+.funcionalidades {
+    width: 100%;
+    height: 100dvh;
+
+    background-color: #000;
+    overflow: hidden;
+}
+
+.funcionalidades > .row {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0 !important;
+    padding: 50px 6vw !important;
+}
+
+/* ================================
+   ÁREA DO CELULAR
+================================ */
+
+.funcionalidades > .row > .col-10 {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    height: 100%;
+
+    padding: 0 !important;
+}
+
+.funcionalidades > .row > .col-10 > img {
+    width: 550px;
+    height: auto;
+
+    display: block;
+}
+
+
+/* ================================
+   CARD - RESERVA CONFIRMADA
+================================ */
+.confirmation {
+    position: absolute;
+    left: 9%;
+    top: 250px;
+    z-index: 4;
+    width: 195px;
+    height: 175px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(5, 11, 15, 0.92);
+    border: 2px solid #6b7280;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.confirmation img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+}
+
+.confirmation h1 {
+    margin: 5px 0 12px;
+    color: #22C55E !important;
+    font-size: 17px !important;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.4px;
+    word-spacing: 3px;
+}
+
+.confirmation p {
+    margin: 0;
+    color: #d1d5db;
+    font-size: 12px;
+}
+
+/* ================================
+   CARD - QR CODE
+================================ */
+.qr-code {
+    position: absolute;
+    left: 9%;
+    bottom: 190px;
+    z-index: 4;
+    width: 195px;
+    height: 230px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(5, 11, 15, 0.92);
+    border: 2px solid #6b7280;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.qr-code h1 {
+    margin: 0 0 15px;
+    color: #ffffff;
+    font-size: 16px !important;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: 0.4px;
+    word-spacing: 4px;
+}
+
+.qr-code img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+.qr-code p {
+    margin: 0;
+    color: #d1d5db;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+/* ================================
+   CONTEÚDO
+================================ */
+
+.funcionalidades > .row > .col-lg-6:last-child {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 40px 5vw 40px 3vw !important;
+}
+
+
+/* TÍTULO */
+
+.funcionalidades h1 {
+    margin: 0 0 25px;
+
+    color: #ffffff;
+
+    font-size: 52px;
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    letter-spacing: -1.5px;
+}
+
+.funcionalidades h1 span {
+    color: #22C55E;
+    font-style: italic;
+}
+
+
+/* TEXTO */
+
+.funcionalidades .lead {
+    max-width: 620px;
+
+    margin-bottom: 30px;
+
+    color: #c3c3c4;
+
+    font-size: 17px;
+    line-height: 1.55;
+}
+
+
+/* ================================
+   LISTA
+================================ */
+
+.functions {
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+
+    margin: 0 0 35px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.functions li {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    color: #d1d5db;
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.functions li img {
+    width: 23px;
+    height: 23px;
+
+    flex-shrink: 0;
+
+    object-fit: contain;
+}
+
+
+/* ================================
+   BOTÃO
+================================ */
+
+.funcionalidades .btn-primary {
+    width: fit-content;
+
+    padding: 12px 28px !important;
+
+    border: none;
+    border-radius: 50px;
+
+    background-color: #22C55E;
+    color: #000000;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.funcionalidades .btn-primary:hover {
+    background-color: #16A34A;
+
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1500px) {
+    .confirmation {
+        left: 4%;
+        top: 155px;
+    }
+
+    .qr-code {
+        left: 4%;
+        bottom: 145px;
+    }
+
+    .funcionalidades > .row > .col-10 > img {
+    width: 475px;
+    }
+}
+
+/* ================================
+   TABLETS
+================================ */
+
+@media (max-width: 991px) {
+
+    .funcionalidades {
+        height: auto;
+        min-height: 100dvh;
+        overflow: hidden;
+    }
+
+    .funcionalidades > .row {
+        height: auto;
+        min-height: 100dvh;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 70px 30px !important;
+    }
+
+    /* CELULAR */
+
+    .funcionalidades > .row > .col-10 {
+        width: 100%;
+        max-width: 100%;
+
+        height: 550px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0 auto;
+    }
+
+    .funcionalidades > .row > .col-10 > img {
+        width: 350px;
+        max-width: 70vw;
+    }
+
+    /* CARD CONFIRMAÇÃO */
+
+    .confirmation {
+        left: 3%;
+        top: 100px;
+
+        width: 170px;
+        height: 155px;
+
+        padding: 18px;
+    }
+
+    .confirmation img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .confirmation h1 {
+        font-size: 15px !important;
+    }
+
+    /* CARD QR */
+
+    .qr-code {
+        left: 3%;
+        top: 360px;
+        bottom: auto;
+
+        width: 170px;
+        height: 205px;
+
+        padding: 18px;
+    }
+
+    .qr-code img {
+        width: 75px;
+        height: 75px;
+    }
+
+    /* CONTEÚDO */
+
+    .funcionalidades > .row > .col-lg-6:last-child {
+        width: 100%;
+
+        padding: 50px 20px 30px !important;
+    }
+
+    .funcionalidades h1 {
+        font-size: 44px;
+    }
+
+    .funcionalidades .lead {
+        font-size: 16px;
+    }
+}
+
+
+/* ================================
+   CELULAR
+================================ */
+
+@media (max-width: 576px) {
+
+    .funcionalidades {
+        height: auto;
+        min-height: 0;
+    }
+
+    .funcionalidades > .row {
+        min-height: 0;
+
+        padding: 50px 20px !important;
+    }
+
+    /* CELULAR */
+
+    .funcionalidades > .row > .col-10 {
+        height: 470px;
+    }
+
+    .funcionalidades > .row > .col-10 > img {
+        width: 300px;
+        max-width: 65vw;
+    }
+
+    /* CARD CONFIRMAÇÃO */
+
+    .confirmation {
+        left: 18px;
+        top: 120px;
+
+        width: 125px;
+        height: 130px;
+
+        padding: 12px;
+    }
+
+    .confirmation img {
+        width: 28px;
+        height: 28px;
+
+        margin-bottom: 7px;
+    }
+
+    .confirmation h1 {
+        font-size: 11px !important;
+
+        line-height: 1.3;
+        letter-spacing: 0.2px;
+        word-spacing: 1px;
+
+        margin: 1px 0 8px;
+    }
+
+    .confirmation p {
+        font-size: 9px;
+    }
+
+    /* CARD QR */
+
+    .qr-code {
+        left: auto;
+        right: 17px;
+        top: 300px;
+
+        width: 125px;
+        height: 150px;
+
+        padding: 12px;
+    }
+
+    .qr-code h1 {
+        font-size: 12px !important;
+
+        line-height: 1.3;
+        letter-spacing: 0.2px;
+        word-spacing: 1px;
+
+        margin-bottom: 8px;
+    }
+
+    .qr-code img {
+        width: 45px;
+        height: 45px;
+
+        margin-bottom: 18px;
+    }
+
+    .qr-code p {
+        font-size: 9px;
+    }
+
+    /* CONTEÚDO */
+
+    .funcionalidades > .row > .col-lg-6:last-child {
+        padding: 35px 5px 20px !important;
+    }
+
+    .funcionalidades h1 {
+        font-size: 34px;
+
+        line-height: 1.05;
+        letter-spacing: -1px;
+
+        margin-bottom: 20px;
+    }
+
+    .funcionalidades .lead {
+        font-size: 14px;
+        line-height: 1.5;
+
+        margin-bottom: 25px;
+    }
+
+    /* LISTA */
+
+    .functions {
+        gap: 11px;
+
+        margin-bottom: 30px;
+    }
+
+    .functions li {
+        gap: 10px;
+
+        font-size: 13px;
+        line-height: 1.35;
+    }
+
+    .functions li img {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* BOTÃO */
+
+    .funcionalidades .btn-primary {
+        padding: 11px 22px !important;
+
+        font-size: 14px;
+    }
+}

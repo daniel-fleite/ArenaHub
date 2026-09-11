@@ -1,0 +1,344 @@
+/* ==============================
+   DEPOIMENTOS
+================================= */
+
+.depoimentos {
+    background-color: #f5f6f7;
+    padding: 80px 0;
+}
+
+/* ==============================
+   CABEÇALHO
+================================= */
+
+.depoimentos-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.depoimentos-header h2 {
+    margin: 0;
+    color: #111827;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.depoimentos-header h2 span {
+    color: #16A34A;
+}
+
+.depoimentos-header p {
+    margin: 12px 0 0;
+    color: #6B7280;
+    font-size: 17px;
+}
+
+
+/* ==============================
+   CONTEÚDO
+================================= */
+
+.depoimentos-content {
+    display: flex;
+    align-items: stretch;
+    gap: 30px;
+}
+
+
+/* ==============================
+   CAROUSEL
+================================= */
+
+.testimonial-carousel {
+    flex: 1;
+    min-width: 0;
+}
+
+.testimonial-carousel ngb-carousel {
+    height: 100%;
+}
+
+
+/* ==============================
+   CARD DO DEPOIMENTO
+================================= */
+
+.testimonial-card {
+    min-height: 280px;
+    padding: 45px 65px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #ffffff;
+    border-radius: 18px;
+}
+
+
+/* FOTO */
+
+.testimonial-card > img {
+    width: 90px;
+    height: 90px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* TEXTO */
+
+.testimonial-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 620px;
+    margin-left: 20px;
+}
+
+.testimonial-text p {
+    margin: 0 0 22px;
+
+    color: #111827;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.testimonial-text strong {
+    color: #111827;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.testimonial-text span {
+    margin-top: 5px;
+
+    color: #6B7280;
+    font-size: 14px;
+}
+
+
+/* ==============================
+   RESULTADOS
+================================= */
+
+.results-card {
+    width: 330px;
+    flex-shrink: 0;
+
+    padding: 45px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #16A34A;
+    border-radius: 18px;
+}
+
+.results-card h3 {
+    margin: 0 0 25px;
+
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.results-card h3 strong {
+    font-weight: 800;
+}
+
+.results-card p {
+    margin: 0;
+
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.results-card p strong {
+    font-weight: 800;
+}
+
+
+/* ==============================
+   CAROUSEL - NG BOOTSTRAP
+================================= */
+
+/* Remove o fundo/altura padrão que pode atrapalhar */
+
+.testimonial-carousel .carousel {
+    height: 100%;
+}
+
+.testimonial-carousel .carousel-inner {
+    height: 100%;
+}
+
+.testimonial-carousel .carousel-item {
+    height: 100%;
+}
+
+
+/* ==============================
+   CAROUSEL - NG BOOTSTRAP
+================================= */
+
+.testimonial-carousel ::ng-deep .carousel-control-prev,
+.testimonial-carousel ::ng-deep .carousel-control-next {
+    width: 55px;
+}
+
+.testimonial-carousel ::ng-deep .carousel-control-prev-icon,
+.testimonial-carousel ::ng-deep .carousel-control-next-icon {
+    width: 18px;
+    height: 18px;
+
+    filter: brightness(0);
+    opacity: 0.7;
+}
+
+
+/* INDICADORES */
+
+.testimonial-carousel ::ng-deep .carousel-indicators {
+    margin-bottom: 8px;
+}
+
+.testimonial-carousel ::ng-deep .carousel-indicators button {
+    width: 8px;
+    height: 8px;
+
+    margin: 0 4px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #d1d5db;
+
+    opacity: 1;
+}
+
+.testimonial-carousel ::ng-deep .carousel-indicators button.active {
+    background-color: #22C55E;
+}
+
+
+/* ==============================
+   RESPONSIVO
+================================= */
+
+@media (max-width: 991px) {
+
+    .depoimentos {
+        padding: 65px 0;
+    }
+
+    .depoimentos-content {
+        flex-direction: column;
+    }
+
+    .results-card {
+        width: 100%;
+        min-height: 220px;
+    }
+
+    .testimonial-card {
+        padding: 45px 55px;
+    }
+}
+
+
+/* ==============================
+   MOBILE
+================================= */
+
+@media (max-width: 576px) {
+
+    .depoimentos {
+        padding: 55px 0;
+    }
+
+    .depoimentos-header {
+        margin-bottom: 30px;
+    }
+
+    .depoimentos-header h2 {
+        font-size: 27px;
+    }
+
+    .depoimentos-header p {
+        font-size: 15px;
+    }
+
+
+    /* DEPOIMENTO */
+
+    .testimonial-card {
+        min-height: 390px;
+
+        padding: 45px 35px 55px;
+
+        flex-direction: column;
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 20px;
+    }
+
+    .testimonial-card > img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .testimonial-text {
+        align-items: center;
+    }
+
+    .testimonial-text p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 22px;
+    }
+
+    .testimonial-text strong {
+        font-size: 15px;
+    }
+
+    .testimonial-text span {
+        font-size: 13px;
+    }
+
+
+    /* SETAS */
+
+    .testimonial-carousel .carousel-control-prev,
+    .testimonial-carousel .carousel-control-next {
+        width: 40px;
+    }
+
+
+    /* RESULTADOS */
+
+    .results-card {
+        min-height: 250px;
+
+        padding: 35px 30px;
+
+        text-align: center;
+    }
+
+    .results-card h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .results-card p {
+        font-size: 15px;
+    }
+
+}
