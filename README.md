@@ -1,59 +1,142 @@
-# ArenaHub
+# ArenaHub ⚽
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.3.
+Landing page do **ArenaHub**, uma plataforma voltada para a gestão de arenas esportivas e para melhorar a experiência dos atletas.
 
-## Development server
+O projeto foi desenvolvido como parte dos estudos de desenvolvimento Full Stack, com foco em **Angular, HTML, CSS e Bootstrap**, utilizando componentes do **ng-bootstrap** para elementos interativos.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 📌 Sobre o projeto
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+O ArenaHub é uma solução pensada para conectar **arenas esportivas e atletas** em uma única plataforma.
 
-## Code scaffolding
+A proposta é facilitar a gestão das arenas, automatizando processos como reservas, pagamentos e controle de acesso, além de oferecer recursos para aumentar a ocupação das quadras e melhorar a experiência dos jogadores.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+A landing page apresenta as principais funcionalidades e benefícios da plataforma.
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🚀 Tecnologias utilizadas
 
-```bash
-ng generate --help
-```
+- **Angular**
+- **TypeScript**
+- **HTML5**
+- **CSS3**
+- **Bootstrap 5**
+- **ng-bootstrap**
 
-## Building
+---
 
-To build the project run:
+## 🎯 Funcionalidades apresentadas
 
-```bash
-ng build
-```
+A landing page apresenta diferentes recursos do ArenaHub, incluindo:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Gestão de reservas
+- Pagamentos
+- Controle de acesso
+- Maior ocupação das quadras
+- Preço dinâmico
+- Matchmaking entre atletas
+- Venda de produtos, bebidas e combos
+- Dashboard com dados da arena
+- Divisão de pagamentos entre jogadores
+- Participação em torneios
+- Ranking de atletas
+- Histórico de jogos
+- Depoimentos de clientes
+- Chamada para teste da plataforma
 
-## Running unit tests
+---
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## 🖥️ Estrutura da página
 
-```bash
-ng test
-```
+A landing page é dividida em diferentes seções:
 
-## Running end-to-end tests
+- Navbar
+- Hero
+- Modalidades esportivas
+- Soluções e funcionalidades
+- Experiência dos atletas
+- Depoimentos
+- CTA
+- Footer
 
-For end-to-end (e2e) testing, run:
+A navegação entre as seções é feita através de **âncoras na própria página**.
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🎨 Identidade visual
 
-## Additional Resources
+A interface utiliza uma identidade visual baseada principalmente em:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Preto
+- Branco
+- Tons de cinza
+- Verde `#22C55E`
+
+O objetivo é transmitir uma aparência moderna, tecnológica e relacionada ao universo esportivo.
+
+A página também possui adaptação para diferentes tamanhos de tela, incluindo dispositivos móveis.
+
+---
+
+## 📦 Instalação
+
+Clone o repositório:
+
+
+"git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git"
+
+
+Entre na pasta:
+
+
+"cd SEU-REPOSITORIO"
+
+
+Instale as dependências:
+
+
+"npm install"
+
+
+Execute o projeto:
+
+"npm start"
+
+
+Depois, acesse:
+
+
+"http://localhost:4200"
+
+
+---
+
+## 📚 Objetivo
+
+O projeto tem como objetivo colocar em prática conceitos estudados durante o desenvolvimento do curso, principalmente:
+
+- Componentização com Angular
+- Organização de projetos Angular
+- HTML semântico
+- CSS e responsividade
+- Bootstrap
+- TypeScript
+- Utilização de bibliotecas externas
+- Navegação por âncoras
+- Criação de interfaces modernas
+
+---
+
+## 👨‍💻 Desenvolvimento
+
+Projeto desenvolvido pela **Equipe Startech - Facens**.
+
+---
+
+## 📄 Status
+
+🚧 **Em desenvolvimento**
+
+A landing page está sendo desenvolvida e novas funcionalidades e melhorias visuais podem ser adicionadas futuramente.
