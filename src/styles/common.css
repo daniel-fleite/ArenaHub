@@ -1,0 +1,99 @@
+/* Componentes compartilhados das novas áreas. Usa apenas os tokens de index.css. */
+
+.muted-text { color: var(--muted); font-size: 0.875rem; line-height: 1.55; margin: 0; }
+.back-link { margin: 0 0 1rem; font-size: 0.8125rem; }
+.back-link a, .auth-link, .auth-switch a, .section-head a, .public-footer a, .guard-text a, .request-card a { color: var(--primary); }
+
+/* Avisos */
+.alert { display: flex; align-items: flex-start; gap: 0.75rem; margin: 0 0 1rem; padding: 0.75rem 0.875rem; border: 1px solid var(--border); border-left-width: 3px; border-radius: var(--radius); background: var(--surface); }
+.alert-icon { flex: 0 0 auto; margin-top: 0.125rem; }
+.alert-body { min-width: 0; flex: 1; }
+.alert-body strong { display: block; font-size: 0.8125rem; }
+.alert-body p { margin: 0.25rem 0 0; color: var(--muted); font-size: 0.8125rem; line-height: 1.5; }
+.alert-body strong:only-child { margin: 0; }
+.alert-action { flex: 0 0 auto; }
+.alert-info { border-left-color: var(--blue); } .alert-info .alert-icon { color: var(--blue); }
+.alert-success { border-left-color: var(--positive); } .alert-success .alert-icon { color: var(--positive); }
+.alert-warning { border-left-color: var(--warning); } .alert-warning .alert-icon { color: var(--warning); }
+.alert-error { border-left-color: var(--danger); } .alert-error .alert-icon { color: var(--danger); }
+
+/* Carregamento */
+.spinner { display: inline-block; width: 1.125rem; height: 1.125rem; border: 2px solid var(--border-strong); border-top-color: var(--primary); border-radius: 50%; animation: ah-spin 700ms linear infinite; }
+@keyframes ah-spin { to { transform: rotate(360deg); } }
+.loading-block { display: flex; align-items: center; justify-content: center; gap: 0.75rem; padding: 2.5rem 1rem; color: var(--muted); font-size: 0.875rem; }
+.skeleton { border-radius: var(--radius-sm); background: linear-gradient(90deg, var(--surface), var(--elevated), var(--surface)); background-size: 200% 100%; animation: ah-shimmer 1.4s ease infinite; }
+@keyframes ah-shimmer { to { background-position: -200% 0; } }
+.skeleton-media { height: 9.5rem; border-radius: 0; }
+.skeleton-line { height: 0.875rem; margin-bottom: 0.625rem; }
+.skeleton-line.short { width: 55%; }
+@media (prefers-reduced-motion: reduce) { .spinner, .skeleton { animation: none; } }
+
+.state-error .empty-icon { color: var(--danger); }
+.empty-action { margin-top: 1.25rem; }
+
+/* Selos */
+.badge { display: inline-flex; align-items: center; min-height: 1.5rem; border: 1px solid var(--border); border-radius: 999px; padding: 0.1875rem 0.625rem; font-size: 0.6875rem; font-weight: 600; white-space: nowrap; color: var(--muted); }
+.badge-success { color: var(--positive); } .badge-warning { color: var(--warning); } .badge-danger { color: var(--danger); } .badge-info { color: var(--blue); }
+
+/* Status adicionais (aproveitam .status-badge do projeto) */
+.status-aprovada, .status-ativo { color: var(--positive); }
+.status-rejeitada, .status-suspenso { color: var(--danger); }
+.status-concluida { color: var(--blue); }
+
+/* Faixas de ambiente */
+.env-banner { display: flex; align-items: center; gap: 0.625rem; padding: 0.5rem 1rem; border-bottom: 1px solid var(--border); font-size: 0.75rem; line-height: 1.4; }
+.env-banner svg { flex: 0 0 auto; }
+.env-banner-demo { background: color-mix(in srgb, var(--blue), transparent 88%); color: var(--foreground); }
+.env-banner-preview { background: color-mix(in srgb, var(--warning), transparent 88%); color: var(--foreground); }
+
+/* Formulários */
+.field-error { margin: 0.375rem 0 0; color: var(--danger); font-size: 0.75rem; }
+.field-hint { margin: 0.375rem 0 0; color: var(--subtle); font-size: 0.75rem; }
+.field[aria-invalid="true"] { border-color: var(--danger); }
+.file-input { padding: 0.5rem; cursor: pointer; }
+.thumb-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+.thumb-list img { width: 5rem; height: 5rem; border: 1px solid var(--border); border-radius: var(--radius); object-fit: cover; }
+.plain-list { margin: 0.5rem 0; padding-left: 1.125rem; color: var(--muted); font-size: 0.875rem; }
+
+/* Lista de definição */
+.definition-list { display: grid; margin: 0 0 1rem; }
+.definition-list > div { display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: 1rem; padding: 0.625rem 0; border-top: 1px solid var(--border); }
+.definition-list > div:first-child { border-top: 0; }
+.definition-list dt { color: var(--subtle); font-size: 0.75rem; font-weight: 600; }
+.definition-list dd { margin: 0; color: var(--foreground); font-size: 0.875rem; line-height: 1.5; overflow-wrap: anywhere; }
+
+/* Etapas */
+.stepper { display: flex; gap: 0.5rem; margin: 1.25rem 0; padding: 0; list-style: none; }
+.stepper li { display: flex; flex: 1; align-items: center; gap: 0.5rem; min-width: 0; color: var(--subtle); font-size: 0.75rem; font-weight: 600; }
+.stepper-dot { display: inline-flex; width: 1.5rem; height: 1.5rem; flex: 0 0 auto; align-items: center; justify-content: center; border: 1px solid var(--border-strong); border-radius: 50%; font-size: 0.6875rem; }
+.stepper li.is-current { color: var(--foreground); }
+.stepper li.is-current .stepper-dot { border-color: var(--primary); background: var(--primary-soft); color: var(--primary); }
+.stepper li.is-done { color: var(--muted); }
+.stepper li.is-done .stepper-dot { border-color: var(--primary); background: var(--primary); color: var(--background); }
+.stepper-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.panel-pad { padding: 1.25rem; }
+
+@media (max-width: 48rem) {
+  .definition-list > div { grid-template-columns: 1fr; gap: 0.25rem; }
+  .stepper-label { display: none; }
+  .stepper li.is-current .stepper-label { display: inline; }
+  .stepper li { flex: 0 1 auto; }
+  .stepper li.is-current { flex: 1; }
+  .alert { flex-wrap: wrap; }
+  .alert-action { width: 100%; }
+  .alert-action .button { width: 100%; }
+}
+
+/* Links de ação dentro de tabelas */
+.responsive-table td a { color: var(--primary); font-weight: 600; }
+
+/* Gestão de quadras: ações no cabeçalho e por linha; rótulo só para leitores de tela. */
+.page-header-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.row-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.375rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (max-width: 48rem) {
+  .page-header-actions { width: 100%; }
+  .page-header-actions .button { flex: 1 1 auto; }
+  .row-actions { justify-content: flex-start; }
+}

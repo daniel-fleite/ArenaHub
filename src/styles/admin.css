@@ -1,0 +1,67 @@
+/*
+ * Área administrativa: acento âmbar (--admin-accent) para distinguir do painel do gestor.
+ * Redefine --primary só dentro de .admin-theme (navegação ativa, ações, links, foco); o verde
+ * da marca continua global. A faixa de segurança (.admin-bar) segue em azul informativo.
+ */
+:root {
+  --admin-accent: #f0a94b;
+  --admin-accent-hover: #f5bc6e;
+  --admin-accent-soft: rgba(240, 169, 75, 0.12);
+}
+
+.admin-theme {
+  --primary: var(--admin-accent);
+  --primary-hover: var(--admin-accent-hover);
+  --primary-soft: var(--admin-accent-soft);
+}
+/* Cor de categoria (modalidade) não é acento de ação: mantém o verde da marca. */
+.admin-theme .sport-society { --primary: #b8f36b; --primary-soft: rgba(184, 243, 107, 0.1); }
+.admin-theme .sidebar { border-right-color: color-mix(in srgb, var(--admin-accent), transparent 70%); }
+.admin-bar { display: flex; align-items: center; gap: 0.625rem; padding: 0.5rem 2rem; border-bottom: 1px solid color-mix(in srgb, var(--blue), transparent 70%); background: color-mix(in srgb, var(--blue), transparent 90%); color: var(--foreground); font-size: 0.75rem; line-height: 1.4; }
+.admin-bar svg { flex: 0 0 auto; color: var(--blue); }
+
+.stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+.stat-card { display: grid; gap: 0.25rem; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); padding: 1.125rem; }
+.stat-card span { color: var(--muted); font-size: 0.75rem; font-weight: 600; }
+.stat-card strong { font-size: 1.75rem; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.stat-card small { color: var(--subtle); font-size: 0.75rem; }
+.stat-card.is-highlight { border-color: var(--primary); background: var(--primary-soft); }
+.admin-section { margin-top: 1.5rem; }
+.detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+.detail-grid .definition-list { margin-bottom: 0; }
+.decision-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.decision-bar .flow-title { margin-bottom: 0.25rem; }
+.panel .responsive-table { border: 0; }
+.panel-pad .empty-state { min-height: 12rem; }
+
+.arena-links { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+.arena-chip { display: inline-flex; align-items: center; gap: 0.375rem; border: 1px solid var(--border-strong); border-radius: 999px; padding: 0.125rem 0.25rem 0.125rem 0.625rem; font-size: 0.75rem; }
+.arena-chip button { display: inline-flex; width: 1.25rem; height: 1.25rem; align-items: center; justify-content: center; border: 0; border-radius: 50%; background: transparent; color: var(--muted); cursor: pointer; }
+.arena-chip button:hover { background: var(--elevated); color: var(--danger); }
+
+.bar-list { display: grid; gap: 0.75rem; margin: 1rem 0 0; padding: 0; list-style: none; }
+.bar-list li { display: grid; grid-template-columns: 9rem minmax(0, 1fr) 3rem; align-items: center; gap: 0.75rem; font-size: 0.8125rem; color: var(--muted); }
+.bar-list strong { color: var(--foreground); text-align: right; font-variant-numeric: tabular-nums; }
+.bar-track { height: 0.5rem; overflow: hidden; border-radius: 999px; background: var(--elevated); }
+.bar-fill { height: 100%; border-radius: 999px; background: var(--primary); }
+
+@media (max-width: 64rem) { .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .detail-grid { grid-template-columns: 1fr; } }
+@media (max-width: 48rem) {
+  .admin-bar { padding: 0.5rem 1rem; }
+  .stat-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .decision-bar { align-items: stretch; flex-direction: column; }
+  .bar-list li { grid-template-columns: 6rem minmax(0, 1fr) 2.5rem; }
+}
+
+.admin-arena-cell { display: flex; align-items: center; gap: 0.75rem; }
+.admin-arena-thumb { display: inline-flex; flex: 0 0 auto; width: 4rem; height: 2.75rem; overflow: hidden; align-items: center; justify-content: center; border: 1px solid var(--border); border-radius: var(--radius); background: var(--elevated); color: var(--subtle); font-size: 0.625rem; }
+.admin-arena-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.admin-photo-preview { overflow: hidden; margin-top: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-lg); aspect-ratio: 16 / 9; background: var(--elevated); }
+.admin-photo-preview img { width: 100%; height: 100%; object-fit: cover; }
+.admin-bars li { grid-template-columns: minmax(7rem, 13rem) minmax(0, 1fr) 4rem; }
+.monthly-bars { gap: 0.75rem; height: 10rem; }
+.monthly-bars .daily-fill { background: var(--primary); }
+@media (max-width: 48rem) {
+  .admin-bars li { grid-template-columns: minmax(0, 1fr) 4rem; }
+  .admin-bars .bar-track { grid-column: 1 / -1; grid-row: 2; }
+}
